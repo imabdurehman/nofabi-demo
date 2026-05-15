@@ -47,7 +47,7 @@ export default function Footer() {
         style={{ background: 'linear-gradient(to bottom right, #0a0a1a, #060d1a)' }}
       >
         {/* Inline SVG Globe — left side */}
-        <div className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-0 hidden md:block">
+        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-0 scale-150 md:scale-100 md:left-12 md:translate-x-0">
           <svg viewBox="0 0 200 200" width={160} height={160} aria-hidden="true">
             <style>{`
               @keyframes globeSpin {
@@ -56,7 +56,7 @@ export default function Footer() {
               }
               #globe-spin { animation: globeSpin 12s linear infinite; }
             `}</style>
-            <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={1} />
+            <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.5)" strokeWidth={1} />
             <ellipse cx={100} cy={100} rx={80} ry={8} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
             <ellipse cx={100} cy={100} rx={80} ry={25} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
             <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />

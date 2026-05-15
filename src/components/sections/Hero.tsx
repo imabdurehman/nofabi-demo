@@ -27,7 +27,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {circles.map((circle, i) => (
           <div
@@ -47,6 +47,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="hidden sm:block"
         >
           <span className="inline-block text-sky-400 text-sm font-semibold tracking-widest uppercase mb-6 border border-sky-400/30 rounded-full px-4 py-1.5">
             Pakistan&apos;s #1 Digital Growth Agency
