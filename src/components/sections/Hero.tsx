@@ -32,8 +32,11 @@ export default function Hero() {
         {circles.map((circle, i) => (
           <div
             key={i}
-            className="absolute top-1/2 left-1/2 rounded-full -translate-x-1/2 -translate-y-1/2"
+            className="absolute rounded-full"
             style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
               width: circle.size,
               height: circle.size,
               border: `1px solid ${circle.border}`,

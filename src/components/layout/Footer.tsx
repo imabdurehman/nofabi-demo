@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { Globe } from '@/components/ui/Globe'
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -43,59 +44,15 @@ export default function Footer() {
     <>
       {/* Section A — Let's Work Together */}
       <section
-        className="relative overflow-hidden py-16 md:py-24 px-4 min-h-[280px] flex items-center"
+        className="relative overflow-hidden"
         style={{ background: 'linear-gradient(to bottom right, #0a0a1a, #060d1a)' }}
       >
-        {/* Inline SVG Globe — left side */}
-        {/* Globe — mobile: bottom border bleed */}
-        <div className="block md:hidden absolute bottom-0 left-0 z-10" style={{ transform: 'translateY(50%)' }}>
-          <svg viewBox="0 0 200 200" width={220} height={220} aria-hidden="true">
-            <style>{`
-              @keyframes globeSpinM {
-                from { transform-origin: 100px 100px; transform: rotateY(0deg); }
-                to { transform-origin: 100px 100px; transform: rotateY(360deg); }
-              }
-              .globe-spin-m { animation: globeSpinM 12s linear infinite; }
-            `}</style>
-            <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.5)" strokeWidth={1} />
-            <ellipse cx={100} cy={100} rx={80} ry={8} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={25} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={55} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={70} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <g className="globe-spin-m">
-              <ellipse cx={100} cy={100} rx={80} ry={20} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-              <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-              <ellipse cx={100} cy={100} rx={80} ry={60} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-            </g>
-          </svg>
+        {/* Desktop globe — left side, vertically centered */}
+        <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-72 h-72 z-0 pointer-events-none">
+          <Globe />
         </div>
 
-        {/* Globe — desktop: left side vertically centered */}
-        <div className="hidden md:block absolute left-12 top-1/2 -translate-y-1/2 z-0">
-          <svg viewBox="0 0 200 200" width={160} height={160} aria-hidden="true">
-            <style>{`
-              @keyframes globeSpinD {
-                from { transform-origin: 100px 100px; transform: rotateY(0deg); }
-                to { transform-origin: 100px 100px; transform: rotateY(360deg); }
-              }
-              .globe-spin-d { animation: globeSpinD 12s linear infinite; }
-            `}</style>
-            <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.5)" strokeWidth={1} />
-            <ellipse cx={100} cy={100} rx={80} ry={8} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={25} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={55} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <ellipse cx={100} cy={100} rx={80} ry={70} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <g className="globe-spin-d">
-              <ellipse cx={100} cy={100} rx={80} ry={20} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-              <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-              <ellipse cx={100} cy={100} rx={80} ry={60} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
-            </g>
-          </svg>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center w-full">
+        <div className="relative z-10 max-w-5xl mx-auto text-center w-full py-16 md:py-24 px-4">
           <span className="text-sky-400 text-xs font-semibold tracking-[0.3em] uppercase mb-6 block">
             Let&apos;s Collaborate
           </span>
@@ -119,6 +76,13 @@ export default function Footer() {
                 </Link>
               </motion.div>
             </div>
+          </div>
+        </div>
+
+        {/* Mobile globe — below text, square container so globe renders as circle */}
+        <div className="md:hidden flex justify-center pb-2">
+          <div className="relative w-72 h-72 pointer-events-none">
+            <Globe />
           </div>
         </div>
       </section>
