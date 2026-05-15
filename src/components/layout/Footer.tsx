@@ -47,7 +47,7 @@ export default function Footer() {
         style={{ background: 'linear-gradient(to bottom right, #0a0a1a, #060d1a)' }}
       >
         {/* Inline SVG Globe — left side */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-0 scale-150 md:scale-100 md:left-12 md:translate-x-0">
+        <div className="absolute left-2 top-1/2 -translate-y-1/2 z-0 md:left-12">
           <svg viewBox="0 0 200 200" width={160} height={160} aria-hidden="true">
             <style>{`
               @keyframes globeSpin {

@@ -27,7 +27,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-0">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {circles.map((circle, i) => (
           <div
