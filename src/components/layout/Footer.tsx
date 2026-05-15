@@ -47,14 +47,15 @@ export default function Footer() {
         style={{ background: 'linear-gradient(to bottom right, #0a0a1a, #060d1a)' }}
       >
         {/* Inline SVG Globe — left side */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-0 md:left-12">
-          <svg viewBox="0 0 200 200" width={160} height={160} aria-hidden="true">
+        {/* Globe — mobile: bottom border bleed */}
+        <div className="block md:hidden absolute bottom-0 left-0 z-10" style={{ transform: 'translateY(50%)' }}>
+          <svg viewBox="0 0 200 200" width={220} height={220} aria-hidden="true">
             <style>{`
-              @keyframes globeSpin {
+              @keyframes globeSpinM {
                 from { transform-origin: 100px 100px; transform: rotateY(0deg); }
                 to { transform-origin: 100px 100px; transform: rotateY(360deg); }
               }
-              #globe-spin { animation: globeSpin 12s linear infinite; }
+              .globe-spin-m { animation: globeSpinM 12s linear infinite; }
             `}</style>
             <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.5)" strokeWidth={1} />
             <ellipse cx={100} cy={100} rx={80} ry={8} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
@@ -62,7 +63,31 @@ export default function Footer() {
             <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
             <ellipse cx={100} cy={100} rx={80} ry={55} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
             <ellipse cx={100} cy={100} rx={80} ry={70} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
-            <g id="globe-spin">
+            <g className="globe-spin-m">
+              <ellipse cx={100} cy={100} rx={80} ry={20} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
+              <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
+              <ellipse cx={100} cy={100} rx={80} ry={60} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
+            </g>
+          </svg>
+        </div>
+
+        {/* Globe — desktop: left side vertically centered */}
+        <div className="hidden md:block absolute left-12 top-1/2 -translate-y-1/2 z-0">
+          <svg viewBox="0 0 200 200" width={160} height={160} aria-hidden="true">
+            <style>{`
+              @keyframes globeSpinD {
+                from { transform-origin: 100px 100px; transform: rotateY(0deg); }
+                to { transform-origin: 100px 100px; transform: rotateY(360deg); }
+              }
+              .globe-spin-d { animation: globeSpinD 12s linear infinite; }
+            `}</style>
+            <circle cx={100} cy={100} r={80} fill="none" stroke="rgba(14,165,233,0.5)" strokeWidth={1} />
+            <ellipse cx={100} cy={100} rx={80} ry={8} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
+            <ellipse cx={100} cy={100} rx={80} ry={25} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
+            <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
+            <ellipse cx={100} cy={100} rx={80} ry={55} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
+            <ellipse cx={100} cy={100} rx={80} ry={70} fill="none" stroke="rgba(14,165,233,0.25)" strokeWidth={0.8} />
+            <g className="globe-spin-d">
               <ellipse cx={100} cy={100} rx={80} ry={20} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
               <ellipse cx={100} cy={100} rx={80} ry={40} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
               <ellipse cx={100} cy={100} rx={80} ry={60} fill="none" stroke="rgba(14,165,233,0.35)" strokeWidth={0.8} />
