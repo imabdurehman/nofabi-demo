@@ -27,7 +27,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-0">
+    <section className="relative w-full min-h-[70vh] md:min-h-screen bg-sky-900 flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-0">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {circles.map((circle, i) => (
           <div
@@ -106,7 +106,7 @@ export default function Hero() {
             href="/services"
             className="bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-white hover:text-sky-900 transition-all duration-200 hover:scale-105 active:scale-95"
           >
-            See Our Work
+            See Our Services
           </Link>
         </motion.div>
 

@@ -35,7 +35,7 @@ function MarqueeRow({ reverse = false }: { reverse?: boolean }) {
 
 export default function Marquee() {
   return (
-    <section className="bg-sky-950 py-0 overflow-hidden " aria-hidden="true">
+    <section className="w-full bg-sky-950 py-0 overflow-hidden" aria-hidden="true">
       <MarqueeRow />
     </section>
   )
