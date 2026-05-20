@@ -21,7 +21,7 @@ export default function CTABanner() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              href="https://wa.me/923001234567"
+              href="https://wa.me/923174941609"
               target="_blank"
               rel="noopener noreferrer"
               animate={{ scale: [1, 1.04, 1] }}

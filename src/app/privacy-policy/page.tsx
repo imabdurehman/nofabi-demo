@@ -26,7 +26,7 @@ const sections = [
   },
   {
     title: '5. Data Retention',
-    content: 'We retain your personal information for as long as necessary to provide our services and comply with legal obligations. Client data is typically retained for the duration of the business relationship and for a reasonable period thereafter. You may request deletion of your personal data at any time by contacting us at info@nofabi.com.',
+    content: 'We retain your personal information for as long as necessary to provide our services and comply with legal obligations. Client data is typically retained for the duration of the business relationship and for a reasonable period thereafter. You may request deletion of your personal data at any time by contacting us at nofabiofficial@gmail.com.',
   },
   {
     title: '6. Your Rights',
@@ -42,7 +42,7 @@ const sections = [
   },
   {
     title: '9. Contact Us',
-    content: 'If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at: Email: info@nofabi.com | Phone: +92 300 1234567 | Address: Lahore, Pakistan. We aim to respond to all privacy-related inquiries within 5 business days.',
+    content: 'If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at: Email: nofabiofficial@gmail.com | Phone: 0317 4941609 | Address: Lahore, Pakistan. We aim to respond to all privacy-related inquiries within 5 business days.',
   },
 ]
 

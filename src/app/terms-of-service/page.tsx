@@ -54,7 +54,7 @@ const sections = [
   },
   {
     title: '12. Contact',
-    content: 'For questions about these Terms of Service, please contact us at: Email: info@nofabi.com | Phone: +92 300 1234567 | Address: Lahore, Pakistan.',
+    content: 'For questions about these Terms of Service, please contact us at: Email: nofabiofficial@gmail.com | Phone: 0317 4941609 | Address: Lahore, Pakistan.',
   },
 ]
 

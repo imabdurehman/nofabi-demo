@@ -40,8 +40,8 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h2>
                 <div className="space-y-5">
                   {[
-                    { icon: '📞', label: 'Phone', value: '+92 300 123 4567', href: 'tel:+923001234567' },
-                    { icon: '✉️', label: 'Email', value: 'hello@nofabi.com', href: 'mailto:hello@nofabi.com' },
+                    { icon: '📞', label: 'Phone', value: '0317 4941609', href: 'tel:+923174941609' },
+                    { icon: '✉️', label: 'Email', value: 'nofabiofficial@gmail.com', href: 'mailto:nofabiofficial@gmail.com' },
                     { icon: '📍', label: 'Address', value: 'Lahore, Punjab, Pakistan', href: null },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   Send us a message directly and get a response within 1 hour during business hours.
                 </p>
                 <a
-                  href="https://wa.me/923001234567"
+                  href="https://wa.me/923174941609"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white font-semibold px-5 py-3 rounded-xl transition-colors duration-200 text-sm"

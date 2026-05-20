@@ -27,8 +27,8 @@ const jsonLd = {
   name: 'NOFABI',
   description: "Pakistan's #1 Digital Growth Agency",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nofabi.vercel.app',
-  telephone: '+92-300-1234567',
-  email: 'hello@nofabi.com',
+  telephone: '+923174941609',
+  email: 'nofabiofficial@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Lahore',

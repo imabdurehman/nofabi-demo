@@ -101,11 +101,11 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 <li className="flex items-center gap-2.5 text-gray-300 text-sm">
                   <Phone className="w-4 h-4 text-sky-500 shrink-0" />
-                  <a href="tel:+923001234567" className="hover:text-sky-400 transition-colors">+92 300 1234567</a>
+                  <a href="tel:+923174941609" className="hover:text-sky-400 transition-colors">0317 4941609</a>
                 </li>
                 <li className="flex items-center gap-2.5 text-gray-300 text-sm">
                   <Mail className="w-4 h-4 text-sky-500 shrink-0" />
-                  <a href="mailto:info@nofabi.com" className="hover:text-sky-400 transition-colors">info@nofabi.com</a>
+                  <a href="mailto:nofabiofficial@gmail.com" className="hover:text-sky-400 transition-colors">nofabiofficial@gmail.com</a>
                 </li>
                 <li className="flex items-center gap-2.5 text-gray-300 text-sm">
                   <MapPin className="w-4 h-4 text-sky-500 shrink-0" />
@@ -149,7 +149,7 @@ export default function Footer() {
                 Get a response within 1 hour during business hours. Send us a message directly on WhatsApp.
               </p>
               <a
-                href="https://wa.me/923001234567"
+                href="https://wa.me/923174941609"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 w-full bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors duration-200 mb-4"
@@ -159,7 +159,7 @@ export default function Footer() {
                 </svg>
                 Message on WhatsApp
               </a>
-              <p className="text-gray-500 text-xs mb-1">+92 300 1234567</p>
+              <p className="text-gray-500 text-xs mb-1">0317 4941609</p>
               <p className="text-gray-500 text-xs">Mon–Sat, 9 AM – 7 PM PKT</p>
 
               <div className="flex gap-3 mt-6">
