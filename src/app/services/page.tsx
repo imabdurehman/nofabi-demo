@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Search, Globe, Users, Target, TrendingUp, Palette, Building2, Film } from 'lucide-react'
+import { Search, Globe, Users, Target, TrendingUp, Palette, Building2, Film, PenTool } from 'lucide-react'
 import Marquee from '@/components/sections/Marquee'
 
 export const metadata: Metadata = {
@@ -61,9 +61,16 @@ const services = [
   {
     slug: 'property-management',
     icon: <Building2 className="w-8 h-8" />,
-    title: 'Property Management Marketing',
-    description: 'Specialised digital marketing for real estate agencies and property firms. Generate qualified leads and build your property brand.',
-    benefits: ['Property listing promotion on social media', 'Google & Meta Ads for real estate', 'Real estate SEO for local keywords', 'Lead generation and inquiry tracking'],
+    title: 'Property Management',
+    description: 'Complete property management solutions — tenant management, maintenance coordination, rental marketing, and maximizing your property investment returns.',
+    benefits: ['Tenant screening and management', 'Property marketing and listings', 'Maintenance coordination', 'Monthly performance reporting'],
+  },
+  {
+    slug: 'graphic-design',
+    icon: <PenTool className="w-8 h-8" />,
+    title: 'Graphic Design',
+    description: 'Eye-catching graphics, social media visuals, banners, and brand assets that make your business stand out both online and offline.',
+    benefits: ['Social media post and story design', 'Banner and digital ad creative design', 'Business card and stationery design', 'Brand asset creation and management'],
   },
   {
     slug: 'content-production',

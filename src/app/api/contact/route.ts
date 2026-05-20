@@ -34,7 +34,7 @@ function isValidEmail(email: string): boolean {
 }
 
 function isValidPhone(phone: string): boolean {
-  return /^[+\d\s\-()]{10,15}$/.test(phone.trim())
+  return /^03[0-9]{9}$/.test(phone.trim())
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse<ApiResponse>> {
@@ -71,14 +71,14 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
   const service = sanitize(body.service ?? '')
   const message = sanitize(body.message ?? '')
 
-  if (!name || name.length < 2) {
-    return NextResponse.json({ success: false, message: 'A valid full name is required.' }, { status: 400 })
+  if (!name || name.length < 2 || !/^[a-zA-Z\s]{2,50}$/.test(name)) {
+    return NextResponse.json({ success: false, message: 'Invalid name.' }, { status: 400 })
   }
   if (!email || !isValidEmail(email)) {
     return NextResponse.json({ success: false, message: 'A valid email address is required.' }, { status: 400 })
   }
   if (!phone || !isValidPhone(phone)) {
-    return NextResponse.json({ success: false, message: 'A valid phone number is required.' }, { status: 400 })
+    return NextResponse.json({ success: false, message: 'Invalid Pakistani phone number.' }, { status: 400 })
   }
   if (!service) {
     return NextResponse.json({ success: false, message: 'Please select a service.' }, { status: 400 })

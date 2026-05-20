@@ -15,30 +15,15 @@ export const metadata: Metadata = {
 }
 
 const team = [
-  {
-    name: 'Fahad Noor',
-    role: 'CEO & Founder',
-    initials: 'FN',
-    bio: '10+ years in digital marketing. Built NOFABI to bring world-class strategies to Pakistani businesses.',
-  },
-  {
-    name: 'Amna Malik',
-    role: 'Head of SEO',
-    initials: 'AM',
-    bio: 'Certified Google SEO expert. Managed campaigns for 30+ brands across Pakistan and the Middle East.',
-  },
-  {
-    name: 'Usman Khan',
-    role: 'Lead Developer',
-    initials: 'UK',
-    bio: 'Full-stack developer with a passion for performance. Builds websites that rank, load fast, and convert.',
-  },
-  {
-    name: 'Sara Ahmed',
-    role: 'Creative Director',
-    initials: 'SA',
-    bio: 'Award-winning designer who has shaped brand identities for over 40 companies in South Asia.',
-  },
+  { name: 'Abdul Hadi', role: 'SEO Specialist', service: 'SEO Optimization', initials: 'AH', color: 'bg-sky-500' },
+  { name: 'Abdulrehman', role: 'Web Developer', service: 'Web Development', initials: 'AR', color: 'bg-blue-600' },
+  { name: 'Ahmad', role: 'Social Media Manager', service: 'Social Media Management', initials: 'AM', color: 'bg-cyan-500' },
+  { name: 'Hassan', role: 'Paid Ads Specialist', service: 'Meta Ads', initials: 'HS', color: 'bg-indigo-500' },
+  { name: 'Mosa', role: 'PPC Expert', service: 'Google Ads', initials: 'MS', color: 'bg-sky-600' },
+  { name: 'Fatima', role: 'Brand Strategist', service: 'Branding & Identity', initials: 'FT', color: 'bg-pink-500' },
+  { name: 'Mutahir', role: 'Graphic Designer', service: 'Graphic Design', initials: 'MT', color: 'bg-purple-500' },
+  { name: 'Vivyaan', role: 'Content Creator', service: 'Content Production', initials: 'VV', color: 'bg-orange-500' },
+  { name: 'Sara', role: 'Property Management Specialist', service: 'Property Management', initials: 'SR', color: 'bg-rose-500' },
 ]
 
 const values = [
@@ -117,7 +102,7 @@ export default function AboutPage() {
 
             <div className="bg-sky-900 rounded-3xl p-8 text-white h-fit">
               <h3 className="text-xl font-bold mb-1">Founder&apos;s Message</h3>
-              <p className="text-sky-400 text-sm mb-6">— Fahad Noor, CEO</p>
+              <p className="text-sky-400 text-sm mb-6">— Bilal, CEO</p>
               <blockquote className="text-sky-100 leading-relaxed italic text-sm">
                 &ldquo;I started NOFABI because I believed Pakistani businesses deserved better. Better results, better communication, and an agency that genuinely cares about their growth. Three years later, watching our clients succeed — seeing a local clothing brand go from 1,000 to 50,000 monthly visitors, watching a startup generate its first 100 leads — that is what drives our entire team every day.&rdquo;
               </blockquote>
@@ -126,7 +111,7 @@ export default function AboutPage() {
                   FN
                 </div>
                 <div>
-                  <p className="font-semibold text-sm">Fahad Noor</p>
+                  <p className="font-semibold text-sm">Bilal</p>
                   <p className="text-sky-400 text-xs">CEO & Founder, NOFABI</p>
                 </div>
               </div>
@@ -135,24 +120,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-sky-50 py-20">
+      <section id="team" className="bg-slate-950 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="inline-block text-sky-500 text-sm font-semibold tracking-widest uppercase mb-3">The Team</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Meet the People Behind NOFABI</h2>
+            <span className="inline-block text-sky-500 text-sm font-semibold tracking-widest uppercase mb-3">Our Team</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Meet the People Behind NOFABI</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="bg-white rounded-2xl p-6 text-center border border-sky-100 hover:border-sky-400 transition-colors duration-200"
+                className="rounded-2xl p-6 text-center"
+                style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-sky-500 to-sky-900 flex items-center justify-center mx-auto mb-4">
+                <div className={`w-16 h-16 rounded-full ${member.color} flex items-center justify-center mx-auto mb-4`}>
                   <span className="text-white font-bold text-lg">{member.initials}</span>
                 </div>
-                <h3 className="font-bold text-slate-900 mb-0.5">{member.name}</h3>
-                <p className="text-sky-500 text-sm font-medium mb-3">{member.role}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{member.bio}</p>
+                <h3 className="font-bold text-white text-lg">{member.name}</h3>
+                <span className="inline-block text-xs bg-white/10 text-gray-300 px-3 py-1 rounded-full mt-3">
+                  {member.role}
+                </span>
               </div>
             ))}
           </div>

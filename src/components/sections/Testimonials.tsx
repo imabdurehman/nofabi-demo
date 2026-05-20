@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -11,38 +11,44 @@ interface TestimonialData {
   name: string
   company: string
   initials: string
+  rating: number
 }
 
 const testimonials: TestimonialData[] = [
   {
     quote: 'Working with NOFABI was a game-changer. They understood our brand vision from day one and brought it to life through stunning visuals and strategic marketing campaigns.',
     name: 'Shah Nawaz',
-    company: 'CEO, Hair Beauty',
+    company: 'Hair Beauty',
     initials: 'SN',
+    rating: 5,
   },
   {
-    quote: 'NOFABI completely transformed our brand\'s online presence. From social media to website development, their team handled everything with great attention to detail.',
+    quote: "NOFABI completely transformed our brand's online presence. From social media to website development, their team handled everything with great attention to detail.",
     name: 'Yousaf Ahmed',
-    company: 'CEO, MeerZah',
+    company: 'MeerZah',
     initials: 'YA',
+    rating: 4,
   },
   {
     quote: 'Our leads increased by 3x within the first two months. NOFABI became a true partner, not just an agency. Highly recommend them to any business serious about growth.',
     name: 'Ahmed Raza',
-    company: 'CEO, Digital Ventures',
+    company: 'Digital Ventures',
     initials: 'AR',
+    rating: 4.5,
   },
   {
     quote: 'Their branding and identity work helped us stand out in a competitive market. Collaborative, insightful, and always delivered on time. Excellent service!',
     name: 'Imran Khan',
-    company: 'CEO, 92 Bedding',
+    company: '92 Bedding',
     initials: 'IK',
+    rating: 3.5,
   },
   {
     quote: 'One thing I appreciate about NOFABI is their transparency. No false promises, just results. They explained every step and kept us involved throughout.',
     name: 'Nabeel Malik',
-    company: 'CEO, Misaaq',
+    company: 'Misaaq',
     initials: 'NM',
+    rating: 5,
   },
 ]
 
@@ -52,6 +58,33 @@ const avatars = [
   { initials: 'AR', bg: 'bg-pink-500' },
   { initials: 'IK', bg: 'bg-orange-500' },
 ]
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <span className="flex items-center gap-0.5">
+      {[1, 2, 3, 4, 5].map((i) => {
+        if (rating >= i) {
+          return <span key={i} className="text-sky-400">★</span>
+        }
+        if (rating >= i - 0.5) {
+          return (
+            <span key={i} className="relative inline-block text-gray-600">
+              ★
+              <span
+                className="absolute inset-0 overflow-hidden text-sky-400"
+                style={{ width: '50%' }}
+              >
+                ★
+              </span>
+            </span>
+          )
+        }
+        return <span key={i} className="text-gray-600">★</span>
+      })}
+      <span className="text-gray-400 text-sm ml-1">({rating})</span>
+    </span>
+  )
+}
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -63,11 +96,6 @@ export default function Testimonials() {
   const goNext = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
   }
-
-  useEffect(() => {
-    const timer = setInterval(goNext, 5000)
-    return () => clearInterval(timer)
-  }, [])
 
   const review = testimonials[currentIndex]
 
@@ -86,9 +114,20 @@ export default function Testimonials() {
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
             Real results from real clients — see what businesses across Pakistan say about working with NOFABI.
           </p>
-          <Link href="/testimonials" className="mt-5 inline-block border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white rounded-full px-6 py-2 text-sm transition-colors duration-200">
-            All Testimonials →
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="inline-block mt-6"
+          >
+            <Link
+              href="/testimonials"
+              className="w-20 h-20 rounded-full bg-sky-500 hover:bg-sky-400 text-white text-[10px] font-medium flex flex-col items-center justify-center gap-1 transition-colors duration-200 shadow-xl shadow-sky-500/30"
+            >
+              <span>↗</span>
+              <span>All Reviews</span>
+            </Link>
+          </motion.div>
         </div>
 
         {/* Two-column layout */}
@@ -101,7 +140,9 @@ export default function Testimonials() {
               style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
             >
               <p className="text-7xl font-black text-white leading-none">4.9</p>
-              <p className="text-sky-400 text-xl mt-2">★★★★★</p>
+              <div className="mt-2">
+                <StarRating rating={5} />
+              </div>
               <p className="text-gray-400 text-sm mt-1">(40+ Reviews)</p>
 
               <div className="my-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }} />
@@ -135,7 +176,9 @@ export default function Testimonials() {
               style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
             >
               <p className="text-sky-400 text-sm font-bold">NOFABI</p>
-              <p className="text-sky-400 text-lg mt-4">★★★★★</p>
+              <div className="mt-4">
+                <StarRating rating={review.rating} />
+              </div>
 
               <div className="min-h-[180px] mt-4">
                 <blockquote className="text-white text-lg leading-relaxed italic">
@@ -157,7 +200,7 @@ export default function Testimonials() {
                     <button
                       onClick={goPrev}
                       aria-label="Previous review"
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-sky-400 transition-colors duration-200"
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-sky-400 transition-colors duration-200 cursor-pointer"
                       style={{ border: '1px solid rgba(255,255,255,0.2)' }}
                     >
                       <ChevronLeft className="w-4 h-4" />
@@ -165,7 +208,7 @@ export default function Testimonials() {
                     <button
                       onClick={goNext}
                       aria-label="Next review"
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-sky-400 transition-colors duration-200"
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-sky-400 transition-colors duration-200 cursor-pointer"
                       style={{ border: '1px solid rgba(255,255,255,0.2)' }}
                     >
                       <ChevronRight className="w-4 h-4" />

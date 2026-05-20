@@ -131,7 +131,7 @@ const services: ServiceData[] = [
   },
   {
     slug: 'property-management',
-    title: 'Property Management Marketing',
+    title: 'Property Management',
     eyebrow: 'Real Estate Digital Marketing',
     shortDesc: 'Generate quality property leads and build your real estate brand online.',
     fullDesc: 'Specialised digital marketing for property developers, real estate agencies, and property management companies. We understand the Pakistani property market and build targeted campaigns that attract serious buyers, tenants, and investors.',
@@ -146,6 +146,25 @@ const services: ServiceData[] = [
       { q: 'Do you work with individual agents or agencies?', a: 'Both. We work with solo property agents building their personal brand as well as full real estate agencies with multiple listings. Packages are tailored to your scale.' },
       { q: 'How do you generate property leads?', a: 'Through targeted Meta and Google Ads, SEO-optimised property content, and social media campaigns. We also set up WhatsApp inquiry flows so no lead falls through the cracks.' },
       { q: 'Which cities do you target?', a: 'Primarily Lahore, Karachi, Islamabad, and other major Pakistani cities. We also target overseas Pakistanis interested in property investment back home.' },
+    ],
+  },
+  {
+    slug: 'graphic-design',
+    title: 'Graphic Design',
+    eyebrow: 'Creative Design Services',
+    shortDesc: 'Eye-catching visuals that make your brand stand out online and offline.',
+    fullDesc: 'Our graphic design service delivers professional, brand-consistent visuals for every touchpoint. From social media creatives to print materials, we design assets that capture attention and communicate your brand message clearly and effectively.',
+    benefits: ['Social media post and story design', 'Banner and digital ad creative design', 'Business card and stationery design', 'Brand asset creation and management', 'Infographic and presentation design', 'Print-ready file delivery in all formats', 'Revisions until you are 100% satisfied'],
+    process: [
+      { step: 'Brief', desc: 'We learn your brand, style preferences, and design requirements.' },
+      { step: 'Concept', desc: 'Initial design concepts crafted based on your brief and brand guidelines.' },
+      { step: 'Refine', desc: 'Revisions based on your feedback until every detail is perfect.' },
+      { step: 'Deliver', desc: 'Final files in all formats — web, print, social, and editable source.' },
+    ],
+    faqs: [
+      { q: 'What file formats will I receive?', a: 'You receive all formats you need — PNG, JPG, PDF, SVG, and editable source files. We ensure you have everything for both digital and print use.' },
+      { q: 'How many revisions are included?', a: 'Every project includes revision rounds until you are fully satisfied. We work with you until the design matches your vision exactly.' },
+      { q: 'Can you match my existing brand style?', a: 'Absolutely. We study your existing brand guidelines, colour palette, and typography to ensure every design is consistent with your visual identity.' },
     ],
   },
   {

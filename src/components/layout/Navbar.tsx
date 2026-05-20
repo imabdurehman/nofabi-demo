@@ -30,7 +30,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="text-2xl text-white tracking-tight">
+          <Link href="/" className="text-2xl text-white tracking-tight outline-none">
             <span className="font-black">N</span><span className="font-light">OFABI</span>
           </Link>
 

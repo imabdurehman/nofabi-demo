@@ -9,22 +9,39 @@ export const metadata: Metadata = {
 }
 
 const reviews = [
-  { name: 'Shah Nawaz', company: 'CEO, Hair Beauty', initials: 'SN', quote: 'Working with NOFABI was a game-changer. They understood our brand vision from day one and brought it to life through stunning visuals and strategic marketing campaigns. Our monthly revenue doubled within six months.' },
-  { name: 'Yousaf Ahmed', company: 'CEO, MeerZah', initials: 'YA', quote: 'NOFABI completely transformed our brand\'s online presence. From social media to website development, their team handled everything with great attention to detail. I recommend them to every business owner I know.' },
-  { name: 'Ahmed Raza', company: 'CEO, Digital Ventures', initials: 'AR', quote: 'Our leads increased by 3x within the first two months. NOFABI became a true partner, not just an agency. They are fully invested in your success and it shows in everything they produce.' },
-  { name: 'Imran Khan', company: 'CEO, 92 Bedding', initials: 'IK', quote: 'Their branding and identity work helped us stand out in a competitive market. Collaborative, insightful, and always delivered on time. The quality of work is consistently excellent.' },
-  { name: 'Nabeel Malik', company: 'CEO, Misaaq', initials: 'NM', quote: 'One thing I appreciate about NOFABI is their transparency. No false promises, just results. They explained every step and kept us involved throughout. That level of honesty is rare.' },
-  { name: 'Zainab Hussain', company: 'Founder, ZH Boutique', initials: 'ZH', quote: 'Our Instagram went from 2,000 to 18,000 followers in four months. More importantly, our online sales grew by 140%. NOFABI knows social media inside and out, and the content they produce is genuinely beautiful.' },
-  { name: 'Ali Raza', company: 'Director, TechStart PK', initials: 'AR', quote: 'We hired NOFABI for SEO and within 8 months we were ranking page one for our three most competitive keywords. The organic traffic increase has reduced our paid ad dependency significantly. Exceptional results.' },
-  { name: 'Rabia Khan', company: 'CEO, Lahore Decor', initials: 'RK', quote: 'The website NOFABI built for us loads incredibly fast and looks stunning. Enquiries increased from the day we launched. Our customers constantly compliment the site. The investment paid for itself within 6 weeks.' },
-  { name: 'Faisal Mahmood', company: 'MD, PropertiesPlus', initials: 'FM', quote: 'As a property developer, finding genuine buyer leads online was a constant struggle. NOFABI\'s targeted Meta Ads campaign changed that completely. We receive 30–40 qualified property enquiries every month now.' },
-  { name: 'Hina Tariq', company: 'Founder, GlowSkin PK', initials: 'HT', quote: 'NOFABI managed our entire brand launch — logo, social media, website, and our first ad campaign. Everything was cohesive, professional, and launched on time. We could not have done it without them.' },
-  { name: 'Kamran Sheikh', company: 'CEO, FastDelivery.pk', initials: 'KS', quote: 'Google Ads was completely foreign to me before NOFABI. They set everything up, explained the strategy clearly, and our cost-per-acquisition has come down by 60% over six months. The ROI has been phenomenal.' },
-  { name: 'Sara Nasir', company: 'Marketing Head, EduPak', initials: 'SN', quote: 'We\'ve worked with several agencies in Pakistan. NOFABI is in a different league. The quality of strategy, execution, and communication sets them apart. Our enrolments grew 45% after six months of working together.' },
-  { name: 'Bilal Chaudhry', company: 'Founder, FreshMart PK', initials: 'BC', quote: 'NOFABI\'s content production team is incredibly talented. Our product photography, Reels, and blog content have all improved dramatically. Customers regularly tell us our content is what convinced them to buy.' },
-  { name: 'Mehwish Iqbal', company: 'Director, Karachi Events', initials: 'MI', quote: 'Our Meta Ads ROAS jumped from 1.8x to 5.2x in three months. The team tests everything methodically and never stops optimising. I have full confidence every rupee of ad spend is being managed properly.' },
-  { name: 'Hassan Abbasi', company: 'CEO, BuildRight Pakistan', initials: 'HA', quote: 'The branding package NOFABI created for us is world-class. Our logo, colour system, and brand guidelines gave us the professional identity we needed to win bigger contracts. Worth every rupee.' },
+  { name: 'Shah Nawaz', company: 'Hair Beauty', initials: 'SN', rating: 5, quote: 'Working with NOFABI was a game-changer. They understood our brand vision from day one and brought it to life through stunning visuals and strategic marketing campaigns. Our monthly revenue doubled within six months.' },
+  { name: 'Yousaf Ahmed', company: 'MeerZah', initials: 'YA', rating: 4, quote: 'NOFABI completely transformed our brand\'s online presence. From social media to website development, their team handled everything with great attention to detail. I recommend them to every business owner I know.' },
+  { name: 'Ahmed Raza', company: 'Digital Ventures', initials: 'AR', rating: 5, quote: 'Our leads increased by 3x within the first two months. NOFABI became a true partner, not just an agency. They are fully invested in your success and it shows in everything they produce.' },
+  { name: 'Imran Khan', company: '92 Bedding', initials: 'IK', rating: 4.5, quote: 'Their branding and identity work helped us stand out in a competitive market. Collaborative, insightful, and always delivered on time. The quality of work is consistently excellent.' },
+  { name: 'Nabeel Malik', company: 'Misaaq', initials: 'NM', rating: 5, quote: 'One thing I appreciate about NOFABI is their transparency. No false promises, just results. They explained every step and kept us involved throughout. That level of honesty is rare.' },
+  { name: 'Zainab Hussain', company: 'ZH Boutique', initials: 'ZH', rating: 5, quote: 'Our Instagram went from 2,000 to 18,000 followers in four months. More importantly, our online sales grew by 140%. NOFABI knows social media inside and out, and the content they produce is genuinely beautiful.' },
+  { name: 'Ali Raza', company: 'TechStart PK', initials: 'AR', rating: 4.5, quote: 'We hired NOFABI for SEO and within 8 months we were ranking page one for our three most competitive keywords. The organic traffic increase has reduced our paid ad dependency significantly. Exceptional results.' },
+  { name: 'Rabia Khan', company: 'Lahore Decor', initials: 'RK', rating: 5, quote: 'The website NOFABI built for us loads incredibly fast and looks stunning. Enquiries increased from the day we launched. Our customers constantly compliment the site. The investment paid for itself within 6 weeks.' },
+  { name: 'Faisal Mahmood', company: 'PropertiesPlus', initials: 'FM', rating: 4, quote: 'As a property developer, finding genuine buyer leads online was a constant struggle. NOFABI\'s targeted Meta Ads campaign changed that completely. We receive 30–40 qualified property enquiries every month now.' },
+  { name: 'Hina Tariq', company: 'GlowSkin PK', initials: 'HT', rating: 5, quote: 'NOFABI managed our entire brand launch — logo, social media, website, and our first ad campaign. Everything was cohesive, professional, and launched on time. We could not have done it without them.' },
+  { name: 'Kamran Sheikh', company: 'FastDelivery.pk', initials: 'KS', rating: 4.5, quote: 'Google Ads was completely foreign to me before NOFABI. They set everything up, explained the strategy clearly, and our cost-per-acquisition has come down by 60% over six months. The ROI has been phenomenal.' },
+  { name: 'Sara Nasir', company: 'EduPak', initials: 'SN', rating: 4, quote: 'We\'ve worked with several agencies in Pakistan. NOFABI is in a different league. The quality of strategy, execution, and communication sets them apart. Our enrolments grew 45% after six months of working together.' },
+  { name: 'Bilal Chaudhry', company: 'FreshMart PK', initials: 'BC', rating: 3.5, quote: 'NOFABI\'s content production team is incredibly talented. Our product photography, Reels, and blog content have all improved dramatically. Customers regularly tell us our content is what convinced them to buy.' },
+  { name: 'Mehwish Iqbal', company: 'Karachi Events', initials: 'MI', rating: 5, quote: 'Our Meta Ads ROAS jumped from 1.8x to 5.2x in three months. The team tests everything methodically and never stops optimising. I have full confidence every rupee of ad spend is being managed properly.' },
+  { name: 'Hassan Abbasi', company: 'BuildRight Pakistan', initials: 'HA', rating: 4, quote: 'The branding package NOFABI created for us is world-class. Our logo, colour system, and brand guidelines gave us the professional identity we needed to win bigger contracts. Worth every rupee.' },
 ]
+
+function renderStars(rating: number) {
+  return (
+    <span className="flex items-center gap-0.5">
+      {[1, 2, 3, 4, 5].map((i) => {
+        if (rating >= i) return <span key={i} className="text-sky-400">★</span>
+        if (rating >= i - 0.5) return (
+          <span key={i} className="relative inline-block text-gray-500">
+            ★<span className="absolute inset-0 overflow-hidden text-sky-400" style={{ width: '50%' }}>★</span>
+          </span>
+        )
+        return <span key={i} className="text-gray-500">★</span>
+      })}
+      <span className="text-gray-500 text-xs ml-1">({rating})</span>
+    </span>
+  )
+}
 
 const avatarColors = [
   'bg-sky-500', 'bg-purple-500', 'bg-pink-500', 'bg-orange-500',
@@ -80,7 +97,7 @@ export default function TestimonialsPage() {
                 style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
                 <p className="text-sky-400 text-sm font-bold mb-2"><span className="font-black">N</span><span className="font-light">OFABI</span></p>
-                <p className="text-sky-400 mb-3">★★★★★</p>
+                <div className="mb-3">{renderStars(review.rating)}</div>
                 <blockquote className="text-gray-300 text-sm leading-relaxed flex-1 italic">
                   &ldquo;{review.quote}&rdquo;
                 </blockquote>

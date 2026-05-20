@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Search, Globe, Users, Target, TrendingUp, Palette, Building2, Film } from 'lucide-react'
+import { Search, Globe, Users, Target, TrendingUp, Palette, Building2, Film, PenTool } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 import ServiceCard from '@/components/ui/ServiceCard'
 
@@ -13,8 +13,9 @@ const services = [
   { slug: 'meta-ads', icon: <Target className="w-6 h-6" />, title: 'Meta Ads', description: 'Facebook and Instagram ad campaigns engineered for maximum reach, engagement, and return on ad spend.' },
   { slug: 'google-ads', icon: <TrendingUp className="w-6 h-6" />, title: 'Google Ads', description: 'Capture high-intent buyers at the exact moment they search. Expert PPC campaigns that scale profitably.' },
   { slug: 'branding', icon: <Palette className="w-6 h-6" />, title: 'Branding & Identity', description: 'From logo to brand guidelines — we craft identities that resonate, differentiate, and are built to last.' },
-  { slug: 'property-management', icon: <Building2 className="w-6 h-6" />, title: 'Property Management', description: 'Digital marketing for real estate agencies and property firms. Generate qualified leads and build your property brand online.' },
+  { slug: 'property-management', icon: <Building2 className="w-6 h-6" />, title: 'Property Management', description: 'Complete property solutions — tenant management, rental marketing, and maximizing your property investment returns.' },
   { slug: 'content-production', icon: <Film className="w-6 h-6" />, title: 'Content Production', description: 'Video, reels, photography, and written content that tells your story and keeps audiences coming back.' },
+  { slug: 'graphic-design', icon: <PenTool className="w-6 h-6" />, title: 'Graphic Design', description: 'Eye-catching graphics, social media visuals, banners, and brand assets that make your business stand out online and offline.' },
 ]
 
 const containerVariants = {
@@ -49,7 +50,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {services.map((service) => (
             <motion.div key={service.slug} variants={itemVariants}>

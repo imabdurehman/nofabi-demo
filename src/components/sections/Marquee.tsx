@@ -7,6 +7,7 @@ const items = [
   'Google Ads',
   'Content Creation',
   'Graphic Design',
+  'Property Management',
 ]
 
 const separator = <span className="text-white mx-6 select-none text-xl font-bold">*</span>
@@ -14,12 +15,10 @@ const separator = <span className="text-white mx-6 select-none text-xl font-bold
 function MarqueeRow({ reverse = false }: { reverse?: boolean }) {
   const doubled = [...items, ...items]
   return (
-    <div className="overflow-hidden py-6 group">
+    <div className="overflow-hidden py-6">
       <div
         className={`flex whitespace-nowrap w-max ${
-          reverse
-            ? 'animate-marquee-reverse group-hover:[animation-play-state:paused]'
-            : 'animate-marquee group-hover:[animation-play-state:paused]'
+          reverse ? 'animate-marquee-reverse' : 'animate-marquee'
         }`}
       >
         {doubled.map((item, idx) => (

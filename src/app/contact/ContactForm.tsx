@@ -21,8 +21,9 @@ type FormErrors = Partial<Record<keyof Omit<ContactFormData, 'honeypot'>, string
 function validateForm(data: Omit<ContactFormData, 'honeypot'>): FormErrors {
   const errors: FormErrors = {}
   if (!data.name.trim() || data.name.trim().length < 2) errors.name = 'Please enter your full name.'
+  else if (!/^[a-zA-Z\s]+$/.test(data.name.trim())) errors.name = 'Name can only contain letters.'
   if (!data.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.email = 'Please enter a valid email address.'
-  if (!data.phone.trim() || !/^[+\d\s\-()]{10,15}$/.test(data.phone.trim())) errors.phone = 'Please enter a valid phone number.'
+  if (!data.phone.trim() || !/^03[0-9]{9}$/.test(data.phone.trim())) errors.phone = 'Please enter a valid Pakistani number (03XXXXXXXXX).'
   if (!data.service || data.service === '') errors.service = 'Please select a service.'
   if (!data.message.trim() || data.message.trim().length < 20) errors.message = 'Please write at least 20 characters.'
   return errors
@@ -49,6 +50,20 @@ export default function ContactForm() {
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }))
     }
+  }
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, '')
+    setFormData((prev) => ({ ...prev, name: value }))
+    if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }))
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/[^0-9]/g, '')
+    if (value.length <= 11) {
+      setFormData((prev) => ({ ...prev, phone: value }))
+    }
+    if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -128,8 +143,9 @@ export default function ContactForm() {
             name="name"
             type="text"
             value={formData.name}
-            onChange={handleChange}
+            onChange={handleNameChange}
             placeholder="Muhammad Ali"
+            pattern="[a-zA-Z\s]+"
             className={inputClass('name')}
           />
           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -162,8 +178,9 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             value={formData.phone}
-            onChange={handleChange}
-            placeholder="+92 300 000 0000"
+            onChange={handlePhoneChange}
+            placeholder="03XXXXXXXXX"
+            maxLength={11}
             className={inputClass('phone')}
           />
           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
@@ -214,7 +231,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="w-full bg-sky-500 hover:bg-sky-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2"
+        className="w-full bg-sky-500 hover:bg-sky-400 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer text-white font-bold py-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2"
       >
         {status === 'loading' ? (
           <>
