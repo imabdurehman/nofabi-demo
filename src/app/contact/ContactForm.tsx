@@ -12,6 +12,7 @@ const serviceOptions = [
   'Branding & Identity',
   'Graphic Design',
   'Content Production',
+  'Property Management',
   'Full Digital Marketing Package',
   'Other / Not Sure Yet',
 ]

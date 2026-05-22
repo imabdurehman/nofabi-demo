@@ -27,8 +27,8 @@ const services = [
     slug: 'web-development',
     icon: <Globe className="w-8 h-8" />,
     title: 'Web Development',
-    description: 'We build fast, beautiful, conversion-optimised websites that represent your brand professionally and generate results 24/7.',
-    benefits: ['Custom Next.js and WordPress builds', 'Mobile-first, responsive design', 'Core Web Vitals optimisation', 'E-commerce and landing page builds'],
+    description: 'We build fast, beautiful, conversion-optimised websites and Shopify stores that represent your brand professionally and generate results 24/7.',
+    benefits: ['Custom Next.js and WordPress builds', 'Shopify store setup and customisation', 'Mobile-first, responsive design', 'E-commerce and landing page builds'],
   },
   {
     slug: 'social-media',
@@ -62,8 +62,8 @@ const services = [
     slug: 'property-management',
     icon: <Building2 className="w-8 h-8" />,
     title: 'Property Management',
-    description: 'Complete property management solutions — tenant management, maintenance coordination, rental marketing, and maximizing your property investment returns.',
-    benefits: ['Tenant screening and management', 'Property marketing and listings', 'Maintenance coordination', 'Monthly performance reporting'],
+    description: 'Full-service property management that protects your investment, places high-quality tenants, and maximises your rental income — without the daily landlord stress.',
+    benefits: ['Comprehensive tenant screening — credit, criminal & employment checks', 'Direct rent collection with 24/7 owner financial dashboard', '24/7 maintenance coordination with vetted local contractors', 'Vacancy marketing on top rental platforms with professional photos'],
   },
   {
     slug: 'graphic-design',

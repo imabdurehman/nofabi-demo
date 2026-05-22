@@ -8,12 +8,12 @@ import ServiceCard from '@/components/ui/ServiceCard'
 
 const services = [
   { slug: 'seo', icon: <Search className="w-6 h-6" />, title: 'SEO Optimization', description: 'Rank higher on Google and drive organic traffic that converts. We build sustainable SEO strategies tailored to your industry.' },
-  { slug: 'web-development', icon: <Globe className="w-6 h-6" />, title: 'Web Development', description: 'High-performance websites built for speed, conversions, and mobile-first experiences that your audience will love.' },
+  { slug: 'web-development', icon: <Globe className="w-6 h-6" />, title: 'Web Development', description: 'Custom websites and Shopify stores built for speed, conversions, and mobile-first experiences that turn visitors into customers.' },
   { slug: 'social-media', icon: <Users className="w-6 h-6" />, title: 'Social Media', description: 'Build a loyal audience and turn followers into customers with strategic content and community management.' },
   { slug: 'meta-ads', icon: <Target className="w-6 h-6" />, title: 'Meta Ads', description: 'Facebook and Instagram ad campaigns engineered for maximum reach, engagement, and return on ad spend.' },
   { slug: 'google-ads', icon: <TrendingUp className="w-6 h-6" />, title: 'Google Ads', description: 'Capture high-intent buyers at the exact moment they search. Expert PPC campaigns that scale profitably.' },
   { slug: 'branding', icon: <Palette className="w-6 h-6" />, title: 'Branding & Identity', description: 'From logo to brand guidelines — we craft identities that resonate, differentiate, and are built to last.' },
-  { slug: 'property-management', icon: <Building2 className="w-6 h-6" />, title: 'Property Management', description: 'Complete property solutions — tenant management, rental marketing, and maximizing your property investment returns.' },
+  { slug: 'property-management', icon: <Building2 className="w-6 h-6" />, title: 'Property Management', description: 'Comprehensive tenant screening, rent collection, 24/7 maintenance, and vacancy marketing — so you earn more and stress less.' },
   { slug: 'content-production', icon: <Film className="w-6 h-6" />, title: 'Content Production', description: 'Video, reels, photography, and written content that tells your story and keeps audiences coming back.' },
   { slug: 'graphic-design', icon: <PenTool className="w-6 h-6" />, title: 'Graphic Design', description: 'Eye-catching graphics, social media visuals, banners, and brand assets that make your business stand out online and offline.' },
 ]
